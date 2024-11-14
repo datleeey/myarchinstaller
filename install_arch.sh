@@ -51,7 +51,6 @@ pacman -S nvidia nvidia-settings nvidia-utils --neeeded
 pacman -S obs discord telegram-desktop firefox visual-studio-code-bin 
 sudo pacman -S noto-fonts-cjk noto-fonts-extra noto-fonts noto-fonts-emoji
 timedatectl set-timezone Europe/Kiev
-gsettings set org.gnome.desktop.input-sources xkb-options "['grp:alt_shift_toggle']"
 
 git clone https://aur.archlinux.org/yay.com
 # Убедитесь, что вы находитесь в нужной директории с PKGBUILD
