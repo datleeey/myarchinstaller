@@ -18,7 +18,7 @@ mount /dev/sda3 /mnt/home
 
 # Установка базовой системы
 echo "==> Установка базовой системы"
-pacstrap /mnt base base-devel linux linux-firmware gnome amd-ucode pipewire pipewire-pulse pipewire-alsa pipewire-jack
+pacstrap /mnt base base-devel linux linux-firmware 
 
 # Генерация fstab
 echo "==> Генерация fstab"
@@ -46,7 +46,10 @@ sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
 # Установка дополнительных пакетов
 echo "==> Установка GDM и NetworkManager"
-pacman -S --noconfirm gdm networkmanager 
+pacman -S --noconfirm gdm networkmanager gnome amd-ucode pipewire pipewire-pulse pipewire-alsa pipewire-jack git bluez bluez-utils
+pacman -S nvidia nvidia-settings nvidia-utils --neeeded
+pacman -S obs discord telegram-desktop
+
 
 # Включение служб
 systemctl enable gdm
