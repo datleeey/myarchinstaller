@@ -47,9 +47,9 @@ sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 # Установка дополнительных пакетов
 echo "==> Установка GDM и NetworkManager"
 pacman -S --noconfirm gdm networkmanager gnome amd-ucode pipewire pipewire-pulse pipewire-alsa pipewire-jack git bluez bluez-utils
-pacman -S nvidia nvidia-settings nvidia-utils --neeeded
-pacman -S obs discord telegram-desktop firefox visual-studio-code-bin 
-sudo pacman -S noto-fonts-cjk noto-fonts-extra noto-fonts noto-fonts-emoji
+pacman -S --noconfirm nvidia nvidia-settings nvidia-utils --neeeded
+pacman -S --noconfirm obs discord telegram-desktop firefox visual-studio-code-bin 
+sudo pacman -S --noconfirm noto-fonts-cjk noto-fonts-extra noto-fonts noto-fonts-emoji
 timedatectl set-timezone Europe/Kiev
 
 git clone https://aur.archlinux.org/yay.com
