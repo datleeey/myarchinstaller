@@ -50,6 +50,10 @@ pacman -S --noconfirm gdm networkmanager gnome amd-ucode pipewire pipewire-pulse
 pacman -S nvidia nvidia-settings nvidia-utils --neeeded
 pacman -S obs discord telegram-desktop
 
+git clone https://aur.archlinux.org/yay.com
+# Убедитесь, что вы находитесь в нужной директории с PKGBUILD
+su - datleeey -c "cd yay && makepkg -si"
+rm -rf yay/
 
 # Включение служб
 systemctl enable gdm
