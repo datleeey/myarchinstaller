@@ -52,11 +52,6 @@ pacman -S --noconfirm obs discord telegram-desktop firefox visual-studio-code-bi
 sudo pacman -S --noconfirm noto-fonts-cjk noto-fonts-extra noto-fonts noto-fonts-emoji
 timedatectl set-timezone Europe/Kiev
 
-git clone https://aur.archlinux.org/yay.com
-# Убедитесь, что вы находитесь в нужной директории с PKGBUILD
-su - datleeey -c "cd yay && makepkg -si"
-rm -rf yay/
-
 # Включение служб
 systemctl enable gdm
 systemctl enable NetworkManager
